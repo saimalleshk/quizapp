@@ -1,0 +1,21 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Enter Admin Details</h5>
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" [(ngModel)]="enteredUsername" class="form-control" id="username"
+                                placeholder="Username">
+                        </div>
+                        <div *ngIf="invalidUsername" class="text-danger mt-2">Invalid username. Please enter "admin".
+                        </div>
+                        <button type="button" class="btn btn-primary mt-3" (click)="validateUsername()">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+/* Custom colors for Amazon branding */
+:root {
+    --amazon-black: #000000;
+    --amazon-orange: #FF9900;
+}
+
+.footer {
+    background-color: var(--amazon-black);
+}
+
+.footer a {
+    color: var(--amazon-orange);
+}
+
+/* Reset margin and padding globally */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Add this in your styles.css or component-specific styles */
+.navbar {
+    padding-top: 1.5rem;
+    /* Adjust the top padding */
+    padding-bottom: 1.5rem;
+    /* Adjust the bottom padding */
+}

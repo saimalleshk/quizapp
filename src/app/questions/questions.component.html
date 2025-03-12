@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ quizQuestions[currentQuestionIndex].text }}</h5>
+                    <form>
+                        <div class="form-check" *ngFor="let option of quizQuestions[currentQuestionIndex].options">
+                            <input class="form-check-input" type="radio" name="option" [value]="option"
+                                [(ngModel)]="answers[currentQuestionIndex]">
+                            <label class="form-check-label">{{ option }}</label>
+                        </div>
+                    </form>
+                    <button [disabled]="submitButtonDisabled" class="btn btn-primary mt-3"
+                        (click)="submitAnswer()">Submit Answer</button>
+                    <div *ngIf="showExplanation" class="mt-3" [innerHTML]="explanationText"></div>
+                    <button *ngIf="showNextQuestionButton" class="btn btn-primary mt-3"
+                        (click)="goToNextQuestion()">Next Question</button>
+                    <button *ngIf="showSubmitAssignmentButton" class="btn btn-primary mt-3"
+                        (click)="submitQuiz()">Submit Assignment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
