@@ -14,7 +14,7 @@ export class QuestionsComponent implements OnInit {
       text: 'What is the capital of France?',
       options: [
         'Paris',
-        'London',
+        'Germany',
         'Berlin',
         'Madrid'],
       correctOption: 1,
